@@ -1,0 +1,20 @@
+<%- include('./parts/head',{title:'Pizzaria Fantástica - Login'}); %>
+<link rel="stylesheet" href="/css/login.css">
+<form id="login" method="POST" action="/adm/login">
+	<label>
+		Usuário ou Email:
+		<input type="text" name="user" id="user" placeholder="Digite o nome de usuario">
+	</label>
+
+	<label>
+		Senha:
+		<input type="password" name="password" id="password" placeholder="Digite a senha de usuário">
+	</label>
+
+    <button type="submit">Login</button>
+    
+    <% if (error) { %>
+        <div><%- error %></div>
+    <% } %>
+</form>
+<%- include('./parts/foot'); %>
